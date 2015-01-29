@@ -13,6 +13,8 @@ public class Hero {
 	
 	//Public Properties ***********************
 	public String name;
+	public int randomNumber;
+	public int damageNumber;
 	
 	//Getters *********************************
 	public int getStrength() {
@@ -44,12 +46,19 @@ public class Hero {
 		this.health = (int)(Math.random() * 100 + 1);
 	}
 	
-	private void hitAttempt() {
+	private boolean hitAttempt() {
+		randomNumber = (int)(Math.random() * 100 + 1);
+		if(randomNumber > 0 && randomNumber <= 20)
+		return true;
+	 else
+		return false;
 		
 	}
 	
-	private void hitDamage() {
-		
+	private int hitDamage() {
+		damageNumber = (int)(Math.random() *6 + 1);
+		damageNumber = damageNumber * strength;
+		return damageNumber;
 	}
 	
 	//Public Methods **************************
@@ -63,7 +72,13 @@ public class Hero {
 	
 	public void fight() {
 		System.out.println(this.name + " is fighting");
-		
+		hitAttempt();
+		if(hitAttempt() == true) {
+			hitDamage(); 
+			System.out.println(name + " has hit for " + damageNumber + " Damage!");
+		}else{ 
+				System.out.println(name + " has missed the attack!");
+			}
 	}
 	
 }

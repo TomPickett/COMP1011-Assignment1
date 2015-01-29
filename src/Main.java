@@ -1,7 +1,7 @@
 /**
  * @author Tom Pickett
  *Class Description: The main part of the project
- *@Version 0.2 - Almost finished Hero class
+ *@Version 0.3 - Finished the Hero class
  */
 
 public class Main {
