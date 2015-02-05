@@ -9,15 +9,9 @@ public class Main {
 	public static void main(String[] args) {
 		
 		//Instantiate Hero
-		//Hero hero = new Hero("Hercules");
-		//hero.showAbilities();
-		//hero.fight();
-		
-		//Instantiate Superhero
-		Superhero superhero = new Superhero("Spider Man");
-		superhero.showPowers();
-		superhero.fight();
-		
+		Hero hero = new Hero("Hercules");
+		hero.showAbilities();
+		hero.fight();		
 	}
 
 }
