@@ -1,6 +1,6 @@
 /**
  * @author Tom Pickett
- *Class Description: The main Hero 
+ *Class Description: The Hero 
  *
  */
 
